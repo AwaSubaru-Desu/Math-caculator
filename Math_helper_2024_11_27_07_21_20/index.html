@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Problem Solver</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+</head>
+<body>
+  <h1>Math Problem Solver</h1>
+  <p>Enter a math expression:</p>
+  <input type="text" id="mathInput">
+  <button onclick="solveMathProblem()">Solve</button>
+  <p id="solution"></p>
+  <script>
+    function setup() {
+      // Setup canvas if needed
+    }
+
+    function draw() {
+      // Draw if needed
+    }
+
+    function solveMathProblem() {
+      let mathInput = document.getElementById('mathInput').value;
+      let solutionElement = document.getElementById('solution');
+      
+      try {
+        // Use Math.js to evaluate the expression
+        let solution = math.evaluate(mathInput);
+        solutionElement.innerText = "Solution: " + solution;
+      } catch (error) {
+        solutionElement.innerText = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
